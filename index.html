@@ -1,0 +1,42 @@
+<html>
+<title>This is for Test</title>
+<head>
+    <script>//Write a function called deepClone which takes an object and creates a copy of it.
+        //For e.g. deepClone({ name: "Hitachi MGRM NET", address: { city: "Gurgaon", country: "India" } }) -> { name: "Hitachi MGRM NET", address: { city: "Gurgaon", country: "India" } }
+        const person={ name: "Hitachi MGRM NET", address: { city: "Gurgaon", country: "India" }}
+        function deepClone(person){
+            const newPerson = {...person}
+            console.log(newPerson)
+            return newPerson;
+        }
+        deepClone(person);
+//         Write a function called areAnagrams which takes two string arguments and checks whether they are anagrams.
+// For e.g. areAnagrams('fried', 'fired') -> true
+
+// Basic test cases are required for all the questions.
+
+
+// An anagram of a string is another string that contains the same characters, only the order of characters can be different. For example, “abcd” and “dabc” are an anagram of each other.
+const string1= 'fried';
+const string2= 'fired'; 
+function areAnagrams(string1,string2){
+    if(string1.length===string2.length){
+        for(let i=0;i<string2.length;i++){
+            if(string1.includes(string2.charAt(i)))
+            return true
+            else
+            return false
+        }
+    }
+    else
+        return false;
+
+}
+areAnagrams(string1,string2)
+console.log(areAnagrams(string1,string2))
+        
+        
+        </script>
+</head>
+<body>This will log data in console</body>
+</html>
